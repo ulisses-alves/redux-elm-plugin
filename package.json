@@ -1,0 +1,22 @@
+{
+  "name": "redux-elm-plugin",
+  "version": "1.0.0",
+  "description": "Utility package for using Elm with Redux.",
+  "main": "dist/redux-elm-plugin.js",
+  "repository": "https://github.com/ulisses-alves/redux-elm-plugin",
+  "author": "Ulisses Bini de Paiva Alves <ulissesbpalves@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.0",
+    "rollup": "^0.50.0",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-optimize-js": "^0.0.4",
+    "rollup-plugin-uglify": "^2.0.1"
+  }
+}
