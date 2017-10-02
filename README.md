@@ -13,16 +13,19 @@ The plugin exports the following members from a given Elm app:
 ```javascript
 import * as elmPlugin 'redux-elm-plugin'
 
-const { actions, reducer, middleware } = elmPlugin.app(elmApp, [actionNames], [options])
+const { actions, reducer, middleware } =
+    elmPlugin.app(elmApp, [actionNames], [options])
 ```
 
 ## Options
 ```javascript
 // Default options:
 {
-  // Application name to be used for Redux action types. ex. "elm/UPDATED"
+  // Application name to be used for Redux action types.
+  // ex. "elm/UPDATED"
   name: 'elm',
-  // Port name to which the plugin should subscribe to for state updates.
+  // Port name to which the plugin should subscribe to for state
+  // updates.
   subscribe: 'updated'
 }
 ```
@@ -32,7 +35,7 @@ const { actions, reducer, middleware } = elmPlugin.app(elmApp, [actionNames], [o
 ```javascript
 import { createStore, applyMiddleware } from 'redux'
 import * as elmPlugin from 'redux-elm-plugin'
-import Elm from './Counter.elm' // or global Elm variable if not using a loader
+import Elm from './Counter.elm' // or window.Elm
 
 const counter = elmPlugin.app(
   Elm.Counter,

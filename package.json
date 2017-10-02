@@ -1,7 +1,13 @@
 {
   "name": "redux-elm-plugin",
-  "version": "1.0.0",
-  "description": "Utility package for using Elm with Redux.",
+  "version": "1.0.1",
+  "description": "Utility package for wrapping Elm application ports into Redux actions and reducers.",
+  "keywords": [
+    "redux",
+    "elm",
+    "middleware",
+    "plugin"
+  ],
   "main": "dist/redux-elm-plugin.js",
   "repository": "https://github.com/ulisses-alves/redux-elm-plugin",
   "author": "Ulisses Bini de Paiva Alves <ulissesbpalves@gmail.com>",
