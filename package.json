@@ -1,6 +1,6 @@
 {
   "name": "redux-elm-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Utility package for wrapping Elm application ports into Redux actions and reducers.",
   "keywords": [
     "redux",
@@ -16,6 +16,10 @@
     "build": "rollup -c",
     "prepublish": "npm run build"
   },
+  "files": [
+    "dist",
+    "src"
+  ],
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-plugin-external-helpers": "^6.22.0",
