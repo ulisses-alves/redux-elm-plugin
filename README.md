@@ -117,3 +117,37 @@ update msg model =
             in
                 ( newModel, updated newModel )
 ```
+
+## Individual creator functions
+Actions, reducer and middleware can be created individually as follows:
+
+
+#### action(name [, options])
+```javascript
+const increment = elmPlugin.action('increment')
+```
+
+#### actions(names [, options])
+``` javascript
+const actions = elmPlugin.actions([
+  'increment',
+  'multiply'
+])
+```
+
+#### actionsFromPorts(ports [, options])
+```javascript
+const app = Elm.App.worker()
+
+const actions = elmPlugin.actionsFromPorts(app.ports)
+```
+
+#### reducer([options])
+```javascript
+const reducer = elmPlugin.reducer()
+```
+
+#### middleware(app [, options])
+```javascript
+const middleware = elmPlugin.middleware(Elm.App)
+```

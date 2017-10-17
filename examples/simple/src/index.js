@@ -1,7 +1,6 @@
 import { createStore, applyMiddleware } from 'redux'
 import logger from 'redux-logger'
-import * as elmPlugin from '../../../dist/redux-elm-plugin'
-import html from './index.html'
+import * as elmPlugin from '../../../dist/redux-elm-plugin.es'
 import Elm from './Counter.elm'
 
 const counter = elmPlugin.app(

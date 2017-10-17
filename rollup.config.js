@@ -1,22 +1,31 @@
 import uglify from 'rollup-plugin-uglify'
-import optimize from 'rollup-plugin-optimize-js'
+import { minify } from 'uglify-es'
 import babel from 'rollup-plugin-babel'
-
-const name = 'redux-elm-plugin'
+import pkg from './package.json'
 
 export default {
   input: 'src/index.js',
-  output: {
-    file: `dist/${name}.js`,
-    format: 'umd',
-    name
-  },
+  output: [
+    {
+      file: pkg.main,
+      format: 'umd',
+      name: 'ReduxElmPlugin'
+    },
+    {
+      file: pkg.module,
+      format: 'es'
+    }
+  ],
+  external: [
+    'babel-runtime/regenerator',
+    'babel-runtime/core-js/object/assign',
+    'babel-runtime/helpers/asyncToGenerator'
+  ],
   plugins: [
     babel({
       exclude: 'node_modules/**',
-      plugins: ['external-helpers']
+      runtimeHelpers: true
     }),
-    uglify(),
-    optimize()
+    uglify({}, minify)
   ]
 }

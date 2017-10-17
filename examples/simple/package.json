@@ -1,22 +1,26 @@
 {
   "name": "redux-elm-plugin_examples_app",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Example of app using redux-elm-plugin.",
   "main": "src/index.js",
   "author": "Ulisses Bini de Paiva Alves <ulissesbpalves@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "npm run build && http-server -c-1",
+    "build": "rollup -c"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
+    "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.6.0",
     "elm": "^0.18.0",
-    "elm-webpack-loader": "^4.3.1",
-    "file-loader": "^0.11.2",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.0"
+    "http-server": "^0.10.0",
+    "rollup": "^0.50.0",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-commonjs": "^8.2.1",
+    "rollup-plugin-elm": "^1.0.3",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-replace": "^2.0.0"
   },
   "dependencies": {
     "redux": "^3.7.2",
